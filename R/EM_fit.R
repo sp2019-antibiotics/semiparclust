@@ -3,17 +3,17 @@
 #' For the estimation of GMM with only K=1 component we have used the function MASS::fitdistr().For the estimation of GMM with k=2,...,K components an EM algorithm is used to obtain needed output.
 #'
 #' @param data vector of binned data
-#' @param K number of gaussian components for mixture models - at least two
-#' @param take_resist logical, whether or not to consider first bin refering to resisant observations, default is F
-#' @param plot logical, whether or not to plot final fit of GMM on original data, default is F
-#' @param tolerance  tolerance for the Aitken-acceleration based stopping criterion, default is 0.001
+#' @param K number of Gaussian components for mixture model.
+#' @param take_resist logical, whether or not to consider first bin referring to resistant observations, default is FALSE.
+#' @param plot logical, whether or not to plot final fit of GMM on original data, default is FALSE.
+#' @param tolerance  tolerance for the Aitken-acceleration based stopping criterion, default is 0.001.
 #'
 #' @return
 #' \itemize{
 #'  \item {pi: mixing parameters pik of final GMM}
 #'  \item {mu: means muk of the final GMM}
 #'  \item {sigma: standard deviation sigma of the final homoscedastic GMM}
-#'  \item {loglik: vector of log-likelihood during the iterative procedure - in case of K=1 only last value of log-likelihood will be returned}
+#'  \item {loglik: vector of log-likelihood values during the iterative procedure - in case of K=1 only last value of the log-likelihood will be returned}
 #'  \item {AIC: AIC of the GMM fitted to the given data}
 #'  \item {BIC: BIC of the GMM fitted to the given data}
 #'  \item {data_used: data which were used for the fitting procedure}

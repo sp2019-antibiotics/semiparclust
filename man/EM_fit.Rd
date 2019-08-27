@@ -9,20 +9,20 @@ EM_fit(data, K, take_resist = F, plot = F, tolerance = 0.001)
 \arguments{
 \item{data}{vector of binned data}
 
-\item{K}{number of gaussian components for mixture models - at least two}
+\item{K}{number of Gaussian components for mixture model.}
 
-\item{take_resist}{logical, whether or not to consider first bin refering to resisant observations, default is F}
+\item{take_resist}{logical, whether or not to consider first bin referring to resistant observations, default is FALSE.}
 
-\item{plot}{logical, whether or not to plot final fit of GMM on original data, default is F}
+\item{plot}{logical, whether or not to plot final fit of GMM on original data, default is FALSE.}
 
-\item{tolerance}{tolerance for the Aitken-acceleration based stopping criterion, default is 0.001}
+\item{tolerance}{tolerance for the Aitken-acceleration based stopping criterion, default is 0.001.}
 }
 \value{
 \itemize{
  \item {pi: mixing parameters pik of final GMM}
  \item {mu: means muk of the final GMM}
  \item {sigma: standard deviation sigma of the final homoscedastic GMM}
- \item {loglik: vector of log-likelihood during the iterative procedure - in case of K=1 only last value of log-likelihood will be returned}
+ \item {loglik: vector of log-likelihood values during the iterative procedure - in case of K=1 only last value of the log-likelihood will be returned}
  \item {AIC: AIC of the GMM fitted to the given data}
  \item {BIC: BIC of the GMM fitted to the given data}
  \item {data_used: data which were used for the fitting procedure}
