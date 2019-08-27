@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @examples
+#' data("ZD", package = "EUCASTData")
 #' plotdens(ZD, "Ampicillin", "Escherichia coli")
 #' plotdens(ZD, "Piperacillin", "Escherichia coli")
 #' plotdens(ZD, "Mecillinam", "Escherichia coli")

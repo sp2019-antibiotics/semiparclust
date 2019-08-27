@@ -5,11 +5,10 @@ Version: 0.1.0
 Author: Saria Ahmad, Manlaibayar Bat-erdene, Michal Bechný, Jelena Saf, Radoslava Šuihrová
 Maintainer: Jelena Saf <jelenasaf@outlook.de>
 Description: Computes the Epidemiological Cutoff (ECOFF) value of pairs of antibiotics and bacteria based on the algorithm described in Scrucca (2016) <doi:10.1016/j.csda.2015.01.006>. This value breaks the bacteria into resistant versus sensitive groups for each antibiotic. In addition the package includes a data set 'ZD' (inhibition zone diameters) which is used for the calculation of the ECOFF value.
-Suggests: MASS
+Suggests: EUCASTData, MASS
 Imports: graphics, stats
 Depends: R (>= 3.5.0)
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 6.1.1
  

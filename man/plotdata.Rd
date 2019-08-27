@@ -17,6 +17,7 @@ plotdata(ZD, anti, bac)
 Plots given data.
 }
 \examples{
+data("ZD", package = "EUCASTData")
 plotdata(ZD, "Ampicillin", "Escherichia coli")
 plotdata(ZD, "Piperacillin", "Escherichia coli")
 plotdata(ZD, "Mecillinam", "Escherichia coli")

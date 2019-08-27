@@ -20,6 +20,7 @@ plot of EM density and ECOFF value
 Plots the EM density and the ECOFF Value. Additionally it gives information on the number of components.
 }
 \examples{
+data("ZD", package = "EUCASTData")
 plotdens(ZD, "Ampicillin", "Escherichia coli")
 plotdens(ZD, "Piperacillin", "Escherichia coli")
 plotdens(ZD, "Mecillinam", "Escherichia coli")
