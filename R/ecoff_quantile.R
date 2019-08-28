@@ -11,13 +11,8 @@
 #' }
 #' @export
 
-
 ecoff_quantile = function(my_k, res, quant=0.01){
-  my_dens <- function(x){
-    prob = matrix(sapply(1:my_k, function(k) (res$pi[k] * dnorm(x,mean=res$mu[k],sd=res$sigma))), nrow = length(x))
-    return (rowSums(prob))
-  }
-  vector = unlist(sapply(seq(0,60,by=0.1), function(x)   integrate(my_dens,lower=-50, upper=x))[1,])
-  out = seq(0,60,by=0.1)[which(abs(vector-quant)==min(abs(vector-quant)) )]
+  vector <- sapply(seq(0,60,by=0.1), function(x) sum(sapply(1:my_k, function(k) res$pi[k] * pnorm(x, mean = res$mu[k], sd = res$sigma))))
+  out <- seq(0,60,by=0.1)[which.min(abs(vector-quant))]
   return(out)
 }
