@@ -35,10 +35,8 @@ EM_fit <- function(data, K, take_resist = F, plot = F, tolerance = 0.001){
   bins <- (50-length(mydata) + 1):50
 
   #reconstructed data
-  reconstructed_data <- c()
-  for (i in 1:length(mydata)){
-    reconstructed_data = c(reconstructed_data, rep(bins[i], mydata[i]))
-  }
+  reconstructed_data <- rep(bins, mydata)
+    
   #total number of observations
   N <- length(reconstructed_data)
 

@@ -8,7 +8,7 @@
 #' @param take_resist logical, whether resistant observations - first column of the data - should be used, default is FALSE
 #' @return
 #' \itemize{
-#'  \item{opt: optimal K - number of components whichminimize chosen information criterion for the given data set}
+#'  \item{opt: optimal K - number of components which minimize chosen information criterion for the given data set}
 #'  }
 #' @export
 #'
